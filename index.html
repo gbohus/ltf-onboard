@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Time Onboarding</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background: #41b9d1 !important;
+            margin-bottom: 30px;
+            box-shadow: none;
+            color: #2c3e50;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .header p {
+            margin: 5px 0 0;
+            font-weight: normal;
+        }
+
+        .apps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .app-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease-in-out;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-icon {
+            width: 48px;
+            height: 48px;
+            background: #f0f7ff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .app-icon img {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+        }
+
+        .app-name {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .app-description {
+            font-size: 14px;
+            color: #666;
+            min-height: 42px;
+            margin-bottom: 15px;
+        }
+
+        .app-links {
+            margin-top: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+
+        td {
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: #2193b0;
+            color: white;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .important-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .status-required {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .status-optional {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .table-primary {
+            --bs-table-bg: #2B9CB8 !important;
+            --bs-table-color: #fff !important;
+            background-color: #2B9CB8 !important;
+            color: #fff !important;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="header d-flex flex-column align-items-center justify-content-center py-4" 
+             style="background-color: #2B9CB8; border-radius: 0;">
+            <img src="https://news.lifetime.life/images/life_time_logo_ccc.svg" 
+                 alt="Life Time Logo" 
+                 class="img-fluid mb-3" 
+                 style="height: 45px; filter: brightness(0) invert(1);">
+            <h1 class="display-5 fw-bold text-secondary mb-1">Welcome to Life Time 🎉</h1>
+            <p class="h5 text-secondary mb-0">Onboarding Guide </p>
+        </div>
+        
+      
+        
+        <h2 class="mb-4">Essential Apps - Download Prior to Your Onboarding Meeting</h2>
+        <div class="apps-container">
+            <div class="app-card">
+                <div class="app-icon">
+                    <img src="https://www.workday.com/content/dam/web/zz/images/logos/workday/workday-logo.svg#icon" alt="Workday icon" class="img-fluid">
+                </div>
+                <div class="app-name">Workday</div>
+                <div class="app-description">Timekeeping, scheduling, and HR management platform</div>
+                <div class="app-links mt-2" style="width: 100%;">
+                    <div class="d-flex align-items-center mb-1">
+                        <i class="bi bi-link-45deg" style="font-size: 1.2rem; color: #2B9CB8;"></i>
+                        <span class="ms-1" style="color: #2B9CB8;">Download</span>
+                    </div>
+                    <div class="d-flex">
+                        <a href="https://play.google.com/store/apps/details?id=com.workday.workdroidapp&pcampaignid=web_share" class="btn btn-sm me-2 flex-grow-1" style="background-color: #2B9CB8; color: white;" target="_blank">Android</a>
+                        <a href="https://apps.apple.com/us/app/workday/id316800034" class="btn btn-sm flex-grow-1" style="background-color: #2B9CB8; color: white;" target="_blank">Apple</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-card">
+                <div class="app-icon">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADb0lEQVRYheWXT2gcVRzHP783M7ubbLbVNNCD1opHPTX3nnLRg1QLoogIwmIEQb3oRdiFFYSCB9GLxaUY9BCxS4UieElhtUorMRqttFabxjYmtLrZbCb7J9vMex42XXc3M7s7u8d+YQ7vvd/3+77vN7/fGwbudUi3xRNnvz98vVC6uO151a6BAcLlnZ2R2b/+fpx3X/05KM7uJlKt3zkzPho7uLq5hUg4C5ZSLBZLxKKRL2vwcFCcClpI5/JPGDgStS3GIo5nQmwuIvxbrXmXa9s4IocTmeyLoQ0AXwBoYxiPj4gxpm8PlmDOrxclrpryM6EMpHP5t4F4M0hEjY/EtO7DgxJhaXNL3/a0ahVPZLLv+8XvebHpXD4CbPsImxsbrjHGdMsagDm1ssaY+FbNhJtKFtp0fQRmfVWNkYl4zHTLgq2EX4ol7UBQyZ7pnGgzkM7lHwWe9jUAjDqOFbNt34IUYKu+o+e3ylYsuGOOJjLZo4EGgLNBTGgU5ESjIPes2UpxoVA0I6rXG2rPQjM6ncs/DzzSi+1YSu2LRrxWD0qE1UrFW6rXra4XSwMHEpns63sMAJ/15jaycP9oTCE0LQiYbwsbrW3XC82OUADpXP49elzLrRBBDuy2pSXC1ZKrN4zpf3sgkcnOAEg6l08AmyG4QCPtKyVX1z3NzMqaJJQK+7kAOKS0MZ9rYwj7eFpzcGyUHwtFEw37ofgfp+2HxvdbuwMvDFOJ8E+54l0qVyIJu4/S80fE1sY8B6wDVq/oVjiW4pPf/pSoFYrWieNqemqyCHwYhmUpxeLqbe9KuaoiA2efWTeVXFYA01OTr4VhGmPMB1eXVdwe6vQvQPs98FI/LMeyOLd0U3vaSJi268BbbirpQUfvn5xbuAEcCmKJCJX6Hf3Gdwsq4QxceJtuKrn/7qDzEE92Y0Ysxekr1wzDpf5466DNwPTU5CLwlR9LiXB9veSdL5SsxOCFd9FNJecCDeziGT+mrZQ5dfmaxIY7/bHOiT0Gpqcmq8A7HZvzw8qavrldV87gp//ITSVvdU4Gqp2cW6gBUQE0mFe+mSduqYEr300lfffqpvcsNNru6z+WNcIwbfdy0ELXfH587qdLG9XaY29eWGSItlt1U8kHgha7qj54375jn/76+7yyrQoQ5t/kLsaApwbg3UP4D+o4WAmDMydQAAAAAElFTkSuQmCC" alt="Beekeeper icon" class="img-fluid">
+                </div>
+                <div class="app-name">Beekeeper</div>
+                <div class="app-description">Internal communications and company news</div>
+                <div class="app-links mt-2" style="width: 100%;">
+                    <div class="d-flex align-items-center mb-1">
+                        <i class="bi bi-link-45deg" style="font-size: 1.2rem; color: #2B9CB8;"></i>
+                        <span class="ms-1" style="color: #2B9CB8;">Download</span>
+                    </div>
+                    <div class="d-flex">
+                        <a href="https://play.google.com/store/search?q=beekeeper&c=apps&hl=en_US" class="btn btn-sm me-2 flex-grow-1" style="background-color: #2B9CB8; color: white;" target="_blank">Android</a>
+                        <a href="https://apps.apple.com/us/app/beekeeper-digital-workplace/id963759556" class="btn btn-sm flex-grow-1" style="background-color: #2B9CB8; color: white;" target="_blank">Apple</a>
+                    </div>
+                </div>
+            </div>
+            <div class="app-card">
+                <div class="app-icon">
+                    <img src="https://play-lh.googleusercontent.com/-jpwuThrUUl6qOay0eNCjZ9CfME6I16QGS2OLHlGyNQSygDFsg5Q2htzzg8Mf8oXmp8=w240-h480-rw" alt="Life Time icon" class="img-fluid">
+                </div>
+                <div class="app-name">Life Time Member App</div>
+                <div class="app-description">Digital membership card and class scheduling</div>
+                <div class="app-links mt-2" style="width: 100%;">
+                    <div class="d-flex align-items-center mb-1">
+                        <i class="bi bi-link-45deg" style="font-size: 1.2rem; color: #2B9CB8;"></i>
+                        <span class="ms-1" style="color: #2B9CB8;">Download</span>
+                    </div>
+                    <div class="d-flex">
+                        <a href="https://play.google.com/store/apps/details?id=com.lifetimefitness.interests.fitness&hl=en_US" class="btn btn-sm me-2 flex-grow-1" style="background-color: #2B9CB8; color: white;" target="_blank">Android</a>
+                        <a href="https://apps.apple.com/us/app/life-time-digital/id1192326768" class="btn btn-sm flex-grow-1" style="background-color: #2B9CB8; color: white;" target="_blank">Apple</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-card">
+                <div class="app-icon">
+                    <img src="https://play-lh.googleusercontent.com/EdQr5TvTpgRtt2MgxWvuWH69cySORdPSLdiw9bRbjI9g3QJf0nDTsaPIRYO2s1X0cgA=w240-h480-rw" alt="PingID icon" class="img-fluid">
+                </div>
+                <div class="app-name">PingID</div>
+                <div class="app-description">Secure single sign-on authentication</div>
+                <div class="app-links mt-2" style="width: 100%;">
+                    <div class="d-flex align-items-center mb-1">
+                        <i class="bi bi-link-45deg" style="font-size: 1.2rem; color: #2B9CB8;"></i>
+                        <span class="ms-1" style="color: #2B9CB8;">Download</span>
+                    </div>
+                    <div class="d-flex">
+                        <a href="https://play.google.com/store/apps/details?id=prod.com.pingidentity.pingid&hl=en_US" class="btn btn-sm me-2 flex-grow-1" style="background-color: #2B9CB8; color: white;" target="_blank">Android</a>
+                        <a href="https://apps.apple.com/us/app/pingid/id891247102" class="btn btn-sm flex-grow-1" style="background-color: #2B9CB8; color: white;" target="_blank">Apple</a>
+                    </div>
+                </div>
+            </div>      
+        </div>
+
+        <div class="important-note">
+            <strong>Important:</strong> Only download the apps. Do not attempt to login to any of the apps prior to your onboarding meeting.
+        </div>
+        <h2 class="mt-4">Onboarding Journey</h2>
+     
+
+        <table class="table table-hover">
+            <thead class="table-primary">
+                <tr>
+                    <th>Process</th>
+                    <th>Description</th>
+                    <th>Complete Prior to Onboarding</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>I9 Verification</td>
+                    <td>Employment eligibility verification process</td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-link-45deg fs-4 me-1"></i>
+                            <a href="https://www.uscis.gov/i-9-central/form-i-9-acceptable-documents" target="_blank">Prepare acceptable documents</a>
+                        </div>
+                    </td>
+                    <td>Will be completed together during onboarding</td>
+                </tr>
+                <tr>
+                    <td>Minor Paperwork <span class="status-badge status-optional">If Applicable</span></td>
+                    <td>Working Papers (under 18)</td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-link-45deg fs-4 me-1"></i>
+                            <a href="https://nj.gov/labor/youngworkers/find-a-job/working-papers/getstarted.shtml" target="_blank">NJ Working Papers Online registration</a>
+                        </div>
+                        <div class="d-flex justify-content-center mt-2">
+                            <span class="status-badge" style="background-color: #fff09b; color: #976d01;">Create account</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-link-45deg fs-4 me-1"></i>
+                            <a href="https://www.nj.gov/labor/youngworkers/assets/PDFs/MW-575_Working%20Papers%20Handout%20(9-24).pdf" target="_blank">See instructions for account creation</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Workday</td>
+                    <td>HR system for managing direct deposits and timekeeping</td>
+                    <td>
+                        <ul class="list-unstyled">
+                            <li>Prepare banking information:</li>
+                            <li><i class="bi bi-check-circle"></i> Bank name</li>
+                            <li><i class="bi bi-check-circle"></i> Account number</li>
+                            <li><i class="bi bi-check-circle"></i> Routing number</li>
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>LTpulse Access</td>
+                    <td>Learning and Development Portal</td>
+                    <td class="text-center"><span class="status-badge" style="background-color: #a9a9a9; color: white;">No Steps Required</span></td>
+                    <td><strong>Log in:</strong> Use <span style="font-family: monospace;">e_____@ltfinc.net</span></td>
+                </tr>
+                <tr>
+                    <td>Learning Well</td>
+                    <td>Online Training Platform</td>
+                    <td class="text-center"><span class="status-badge" style="background-color: #a9a9a9; color: white;">No Steps Required</span></td>
+                    <td>Access through <a href="https://www.ltpulse.com" target="_blank">LTpulse.com</a></td>
+                </tr>
+                <tr>
+                    <td>Club Tour</td>
+                    <td>Facility Tour and Member Setup</td>
+                    <td>Bring license and credit/debit card</td>
+                    <td>Parent/guardian required for minors</td>
+                </tr>
+            </tbody>
+        </table> 
+              
+    </main>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
